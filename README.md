@@ -1,9 +1,9 @@
 # LED Hula Hoop
 
-LED Hula Hoop. Supports simple algorithm-based patterns, as well as (some) Hyperion patterns. Note I haven't looked at this in forever, and prioritized it working over cleanliness, so yeah...
+LED Hula Hoop. Supports simple algorithm-based patterns, as well as (some) Hyperion patterns. Note: I haven't looked at this in forever, and prioritized it working over cleanliness, so yeah...
 
 ## Contents
-- `./src/BMP`: console program to convert BMP images to the bit array required to hardcode Hyperion patterns into the hoop
+- `./src/BMP`: console program to convert BMP images to the bit array required to hardcode Hyperion patterns into the hoop. This also served as a way to debug the arduino code as the C# is almost copy-pastable to C++.
 - `./src/hoop`: arduino program that powers the hoop
 
 ## Usage
@@ -20,12 +20,14 @@ dotnet run -- hello 4
 ![JST connection schematic](schematics/JST.png)
 This schematic has a JST connection for charging.
 
-![USB connection schematic](schematics/JST.png)
-This schematic has an Micro-USB connection for charging.
+![USB connection schematic](schematics/USB.png)
+This schematic has a Micro-USB connection for charging.
+
+Optionally, one can wire a button to `BUTTON_PIN` on the trinket (currently pin 2) to manually change patterns. By default, the hoop runs some patterns in a loop.
 
 ### Electronics
 - [Adafruit Trinket](https://www.adafruit.com/product/1501)
 - [LEDs](https://www.amazon.com/dp/B00ZHB9M6A)
 - [battery](https://www.adafruit.com/product/1781)
 - [JST charger](https://www.adafruit.com/product/1304)
-- [USB charger](https://www.amazon.com/gp/product/B06XCXPY86)
+- [USB charger](https://www.amazon.com/dp/B06XCXPY86)
